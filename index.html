@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeba's portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/526596f690.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+          <img src="zlg.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi There,<br>I'm <span>Zeba Syed Farooq</span></h1>
+            <p>ISE Major, Student Engineer</p>
+        </div>
+    </div>
+ </div> 
+<!--------about-------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+               <img src="zpp.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <p>I'm Zeba Syed Farooq, Age 20, A Student at New Horizon College of Engineer doing my course in Information science and engineering, I'm a detail oriented and a responsible student and I like learning new and fun things which are interesting.</p>                </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>HARD SKILLS</span></li>
+                    <li>Basics in C, Java and Python</li>
+                    <li> Basics in HTML and CSS</li>
+                    <li><span>SOFT SKILLS</span></li>
+                    <li>Time Management</li>
+                    <li>Team Work</li>
+                    <li>Curiosity</li>
+                    <li>Emotional Intelligence</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023-2024</span><br> Internship at Motion Cut in web development</li>
+                    <li><span>2023-2024</span><br>Internship at Hindustan Aeronautics Limited</li>
+                    <li><span>2023-2024</span><br>French language Certification</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2019</span><br>CBSE at Radiant school, sharjah</li>
+                    <li><span>2021</span><br>ISC at Progressive School, Sharjah</li>
+                    <li><span>2021-2025</span><br>New Horizon college of engineering</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------Projects------->
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub=title">My Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-handcuffs"></i>
+                <h2>The Prison Complex</h2>
+                <p>This project is aimed for retreving the details of the prisoner,  that is a collection of registers and reports for the effective governance of the prisons</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Tic Tac Toe</h2>
+                <p>This project is a classic Tic Tac Toe game made using python.This was a fun project done in our first semester</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>zebasyedfarooq@gmail.com</p>
+            <p><i class="fa-brands fa-whatsapp"></i>+91 8197050249</p>
+            <br>
+            <div class="social-icons">
+                <a href="https://instagram.com/__z3baa__?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/zeba-syed-farooq-028619257/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <br>
+            <br>
+            <a href="zeba resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <br>
+                    <input type="email" name=" email" placeholder="Your Email" required>
+                    <br>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+    <p> Copyright @zeba<i class="fa-solid fa-heart"></i></p>   
+    </div>   
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        } 
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+
+    var sidemenu= document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenuu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";   
+    }
+
+</script>
+</body>
+</html>
